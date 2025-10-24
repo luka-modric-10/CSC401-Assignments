@@ -1,5 +1,4 @@
 import random
-from turtledemo.penrose import start
 
 # set the table size to 16 and initialize an empty hash table
 tableSize = 16
@@ -18,7 +17,7 @@ keys = random.sample(range(1, 99), tableSize)
 print(f"Example keys: {keys}\n")
 
 
-# insertion status helper function AKA print program state at each loop iteration (pt 2)
+# insertion status helper function AKA print program state at each loop iteration (pt 2)--------------------------------
 def insertionStatus(inserted, key, slot, table, i, occupiedBy = None):
     message = ""
 
@@ -46,7 +45,7 @@ def insertionStatus(inserted, key, slot, table, i, occupiedBy = None):
     print(f"{message} Array: {table}; Probe i = {i}]\n")
 
 
-# insertion function
+# insertion function----------------------------------------------------------------------------------------------------
 def insert(key, table, tableSize):
     h1 = hashFunc1(key)
     h2 = hashFunc2(key)
@@ -83,10 +82,11 @@ def insert(key, table, tableSize):
 
     # worst case, there aren't enough slots (which won't happen in this specific program because
     # the randomly generated keys are the exact quantity of the hash table slots
-    print(f"Failed to insert {key} after {tableSize} probes (table full and/or empty slot not found); Array: {table}; Probe i = {i}]")
+    print(f"Failed to insert {key} after {tableSize} probes (table full and/or empty slot not found); Array: {table}; "
+          f"Probe i = {i}]")
 
 
-# run your algorithm on example keys that you insert into the hash table
+# run your algorithm on example keys that you insert into the hash table------------------------------------------------
 for key in keys:
     insert(key, table, tableSize)
 
