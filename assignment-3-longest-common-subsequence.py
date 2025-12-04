@@ -6,11 +6,13 @@ import random
 1. run your algorithm on two example DNA sequences of length 6
 2. allow the user to modify the two sequences to test other examples
 3. illustrate the process of filling up the table
-4. print out the program state at each loop iteration (in this case, the table after each step of your algorithm)"""
+4. print out the program state at each loop iteration (in this case, the table after each step of your algorithm)
+"""
 
-# function that randomly generates 2 DNA sequences of length 6
+
 SEQUENCE_LENGTH = 6
 
+# function that randomly generates 2 DNA sequences of length 6-------------------------------------
 def generateRandomDNA(length):
   return ''.join(random.choice('ACGT') for _ in range(length))
 
@@ -35,3 +37,8 @@ if modify == "y":
         DNAseq2 = input("Enter second DNA sequence of length 6: ").strip().upper()
 
     print(f"\nExample DNA sequences: {DNAseq1} and {DNAseq2}\n")
+
+
+# algorithm
+
+# print each step of table(2d array initialized with zeros) filling
